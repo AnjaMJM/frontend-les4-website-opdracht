@@ -12,20 +12,134 @@
     5. Media Queries
 ////////////////////////*/
 
-/* ------------------------------- 1. Global Styles -------------------------------- */
+/* ---------------------- 1. Global Styles -------------------------- */
 
-/* ------------------------------- 2. Typography ----------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400&display=swap');
 
-/* ------------------------------- 3. Layout --------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-purple: #5722CD;
+    --color-blue: #4845E4;
+    --color-pink: #ED4385;
+    --color-text-black: #0C0C0C;
+    --color-text-grey: #7A7A7A;
+    --color-bg-lightgrey: #F3F6F9;
+    --color-bg-text-lilac: #F2F0FF; /*voor bonus opdracht */
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container {
+    flex-basis: 1200px;
+    margin: 0 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px dashed black;
+}
+
+
+
+/* ------------------------- 2. Typography ---------------------------- */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+/* ------------------------- 3. Layout -------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
 
+button {
+    background-color: var(--color-pink);
+    color: #FFFFFF;
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    margin: 20px;
+    width: 200px;
+    align-self: center;
+    box-shadow: 0px 0px 4px black;
+    text-transform: uppercase;
+}
+
 /* --------------- 3.2 Other --------------------------- */
 
-/* ------------------------------- 4. Areas ---------------------------------------- */
+/* ------------------------- 4. Areas --------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 
+.header {
+    background-color: var(--color-blue);
+    color: #FFFFFF;
+    /*padding: 80px;*/
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 3px dashed black;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+li {
+    list-style: none;
+    margin: 20px
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 200px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+h1+p {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+
+}
+
+.header-img {
+    width: 60px;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
 
-/* ------------------------------- 5. Media Queries -------------------------------- */
+/* ------------------------- 5. Media Queries -------------------------- */
