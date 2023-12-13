@@ -34,34 +34,24 @@
     --color-bg-text-lilac: #F2F0FF; /*voor bonus opdracht */
 }
 
-.outer-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+body {
 }
 
-.inner-container {
-    flex-basis: 1200px;
-    margin: 0 2rem;
-
+.outer-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    border: 3px dashed black;
 }
-
-
 
 /* ------------------------- 2. Typography ---------------------------- */
 
-body {
+html {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Merriweather', serif;
 }
 
@@ -72,11 +62,10 @@ h1, h2, h3 {
 button {
     background-color: var(--color-pink);
     color: #FFFFFF;
-    padding: 20px;
+    padding: 1rem;
     border: none;
-    border-radius: 30px;
-    margin: 20px;
-    width: 200px;
+    border-radius: 1.5rem;
+    margin: 1rem;
     align-self: center;
     box-shadow: 0 0 4px black;
     text-transform: uppercase;
@@ -107,7 +96,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding: 1rem;
+    padding: 1rem 3rem;
     gap: 3rem;
     list-style: none;
 }
@@ -133,9 +122,9 @@ h1 {
     margin: 2rem 0;
 }
 
-h1+p {
+.header-text p {
     text-align: center;
-    font-size: 20px;
+    font-size: 1.5rem;
     margin: 10px;
 
 }
@@ -148,18 +137,18 @@ h1+p {
 
 .introduction {
     max-width: 700px;
-    padding: 3rem 2rem;
+    padding: 5rem 2rem;
     text-align: center;
 
 }
 
 .introduction h2 {
     color: var(--color-purple);
-    margin: 10px 0;
+    margin: 2rem 0;
 }
 
 .introduction p {
-    margin: 40px 0;
+    margin: 2rem 0;
 }
 
 .introduction a {
@@ -170,11 +159,94 @@ h1+p {
 /* --------------- 4.3 Projects ------------------- */
 
 .projects {
-    flex-wrap: wrap;
+    background-color: var(--color-bg-lightgrey);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects article {
+    max-width: 500px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    padding: 0 2rem;
+}
+
+.projects article img {
+    margin: 2rem 0;
+}
+
+.project-link a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-purple);
+    line-height: 4rem;
+}
+
+.projects span {
+    max-width: 500px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    padding: 1rem 2rem;
+
+}
+
+.project-photo {
+    width: 100%;
 }
 
 /* --------------- 4.4 Services ------------------- */
 
+.services {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.services article {
+    border: 1px solid var(--color-purple);
+    flex-basis: 300px;
+    flex-shrink: 0;
+    padding: 2rem;
+}
+
+.services img {
+    max-width: 80px;
+}
+
+.services h4 {
+    color: var(--color-purple);
+    margin: 2rem 0;
+}
+
 /* --------------- 4.5 Contact Form ------------------- */
 
 /* ------------------------- 5. Media Queries -------------------------- */
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .projects {
+        flex-direction: row;
+    }
+
+    .reverse article {
+        order: 1;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 20px;
+    }
+}
