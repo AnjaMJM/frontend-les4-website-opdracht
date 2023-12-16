@@ -68,9 +68,10 @@ button {
     border-radius: 1.5rem;
     margin: 1rem;
     align-self: center;
-    box-shadow: 0 0 4px black;
+    box-shadow: 0px 8px 8px 2px rgba(0,0,0,0.2);
     text-transform: uppercase;
-    min-width: 15rem;
+    min-width: 12rem;
+
 }
 
 /* --------------- 3.2 Other --------------------------- */
@@ -83,27 +84,24 @@ button {
     background: rgb(72,69,228);
     background: linear-gradient(135deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
     color: #FFFFFF;
-    /*padding: 80px;*/
 }
 
 nav {
+    width: 100%;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    border: 3px dashed black;
-    width: 100%;
 }
 
 .nav-list {
+    list-style: none;
+    padding: 1rem 3rem;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding: 1rem 3rem;
     gap: 3rem;
-    list-style: none;
-}
-
-.nav-list li {
 }
 
 .nav-list a {
@@ -128,7 +126,6 @@ h1 {
     text-align: center;
     font-size: 1.5rem;
     margin: 10px;
-
 }
 
 .header-img {
@@ -141,16 +138,15 @@ h1 {
     max-width: 700px;
     padding: 5rem 2rem;
     text-align: center;
-
 }
 
 .introduction h2 {
     color: var(--color-purple);
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
 
 .introduction p {
-    margin: 2rem 0;
+    margin: 5rem 0 0 0;
 }
 
 .introduction a {
@@ -167,20 +163,29 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 3px dashed red;
+    padding: 80px 0;
 }
 
-.projects article {
-    max-width: 30vw;
-    flex-shrink: 1;
-    flex-grow: 0;
+.project-item {
     padding: 1rem 2rem;
-
-    border: 3px dashed black;
+    order: 1;
+    margin: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.projects article img {
-    margin: 2rem 0;
+.project-item div {
+    padding: 2rem 3rem;
+    order: 1;
+}
+
+.project-item div img {
+    margin: 2rem 0 0 0;
+}
+
+.project-item div p {
+    margin: 1.5rem 0 0 0;
 }
 
 .project-link a {
@@ -192,11 +197,7 @@ h1 {
 }
 
 .projects span {
-    max-width: 60vw;
-    flex-shrink: 1;
-    flex-grow: 0;
-    padding: 1rem 2rem;
-
+    box-shadow: 0px 16px 29px -13px rgba(150,150,150,0.8);
 }
 
 .project-photo {
@@ -206,23 +207,23 @@ h1 {
 /* --------------- 4.4 Services ------------------- */
 
 .services {
-    max-width: 90vw;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-
 }
 
 .services article {
     border: 1px solid var(--color-purple);
     flex-basis: 21rem;
-    height: 25rem;
+    height: 21rem;
     flex-shrink: 0;
     padding: 2rem;
     margin: 2rem;
+    box-shadow: 0px 16px 29px -13px rgba(190,190,190,0.8);
 }
 
 .services img {
@@ -231,7 +232,11 @@ h1 {
 
 .services h3 {
     color: var(--color-purple);
-    margin: 2rem 0;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.services p {
+    color: var(--color-text-grey)
 }
 
 /* --------------- 4.5 Contact Form ------------------- */
@@ -239,30 +244,48 @@ h1 {
 .contact-form {
     background: linear-gradient(135deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
     color: #FFFFFF;
+    padding: 4rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    border: 3px dashed red;
 }
 
-input, textarea {
+form {
+    max-width: 600px;
+    margin: 30px 0 0 0;
+    position: relative;
+}
+
+input,
+textarea {
     font-family: 'Roboto', sans-serif;
     width: 100%;
-    margin: auto;
-    padding: 0.5rem;
-    border-radius: 10px;
-
-
+    padding: 1rem;
+    border-radius: 2px;
+    border-style: none;
+    margin: 0 0 16px 0;
 }
+
+form button {
+    margin: 0 auto;
+}
+
 
 /* --------------- 4.6 Footer ------------------- */
 
 footer {
     background-color: var(--color-text-black);
     color: #FFFFFF;
-    height: 6rem;
+    height: 4rem;
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    max-width: 400px;
+    margin: auto;
+    padding: 1.5rem 0;
 }
 
 /* ------------------------- 5. Media Queries -------------------------- */
@@ -272,12 +295,21 @@ footer {
         font-size: 14px;
     }
 
-    .projects {
+    .project-item {
         flex-direction: row;
     }
 
-    .reverse article {
-        order: 1;
+    .project-item div {
+        max-width: 35vw;
+        order: 0;
+    }
+
+    .project-item span {
+        /*max-width: 60vw;*/
+    }
+
+    .project-item:nth-child(even) span{
+        order: -1;
     }
 }
 
