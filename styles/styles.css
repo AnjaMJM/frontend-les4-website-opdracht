@@ -11,6 +11,7 @@
         4.3 Projects
         4.4 Services
         4.5 Contact Form
+        4.6 Footer
     5. Media Queries
 ////////////////////////*/
 
@@ -247,13 +248,22 @@ h1 {
 }
 
 input, textarea {
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     margin: auto;
+    padding: 0.5rem;
+    border-radius: 10px;
 
 
 }
 
+/* --------------- 4.6 Footer ------------------- */
 
+footer {
+    background-color: var(--color-text-black);
+    color: #FFFFFF;
+    height: 6rem;
+}
 
 /* ------------------------- 5. Media Queries -------------------------- */
 
