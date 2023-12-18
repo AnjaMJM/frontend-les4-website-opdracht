@@ -8,24 +8,333 @@
     4. Areas
         4.1 Header
         4.2 Introduction
-        etc.
+        4.3 Projects
+        4.4 Services
+        4.5 Contact Form
+        4.6 Footer
     5. Media Queries
 ////////////////////////*/
 
-/* ------------------------------- 1. Global Styles -------------------------------- */
+/* ---------------------- 1. Global Styles -------------------------- */
 
-/* ------------------------------- 2. Typography ----------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400&display=swap');
 
-/* ------------------------------- 3. Layout --------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-purple: #5722CD;
+    --color-blue: #4845E4;
+    --color-pink: #ED4385;
+    --color-text-black: #0C0C0C;
+    --color-text-grey: #7A7A7A;
+    --color-bg-lightgrey: #F3F6F9;
+    --color-bg-text-lilac: #F2F0FF; /*voor bonus opdracht */
+}
+
+body {
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------- 2. Typography ---------------------------- */
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+/* ------------------------- 3. Layout -------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
 
+button {
+    background-color: var(--color-pink);
+    color: #FFFFFF;
+    padding: 1rem;
+    border: none;
+    border-radius: 1.5rem;
+    margin: 1rem;
+    align-self: center;
+    box-shadow: 0 8px 8px 2px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    min-width: 12rem;
+
+}
+
 /* --------------- 3.2 Other --------------------------- */
 
-/* ------------------------------- 4. Areas ---------------------------------------- */
+/* ------------------------- 4. Areas --------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 
+.header {
+    background: rgb(72,69,228);
+    background: linear-gradient(135deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
+    color: #FFFFFF;
+}
+
+nav {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 2rem 3rem;
+
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-around;*/
+    gap: 3rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 2rem;
+    max-width: 700px;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.header-text p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.header-img {
+    width: 3.5rem;
+    margin: 2rem 0 0 0;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
 
-/* ------------------------------- 5. Media Queries -------------------------------- */
+.introduction {
+    max-width: 700px;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.introduction h2 {
+    color: var(--color-purple);
+    margin: 1.5rem 0;
+}
+
+.introduction p {
+    margin: 5rem 0 0 0;
+}
+
+.introduction a {
+    text-decoration: none;
+    color: var(--color-purple);
+}
+
+/* --------------- 4.3 Projects ------------------- */
+
+.projects {
+    background-color: var(--color-bg-lightgrey);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.project-item {
+    padding: 1rem 2rem;
+    order: 1;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-item div {
+    padding: 2rem 3rem 0;
+    order: 1;
+}
+
+.project-item div img {
+    margin: 2rem 0 0 0;
+}
+
+.project-item div p {
+    margin: 1.5rem 0 0 0;
+}
+
+.project-link a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-purple);
+    line-height: 4rem;
+}
+
+.projects span {
+    box-shadow: 0 16px 29px -13px rgba(150,150,150,0.8);
+}
+
+.project-photo {
+    width: 100%;
+}
+
+/* --------------- 4.4 Services ------------------- */
+
+.services {
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.services article {
+    border: 1px solid var(--color-purple);
+    flex-basis: 21rem;
+    height: 21rem;
+    flex-shrink: 0;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 16px 29px -13px rgba(190,190,190,0.8);
+}
+
+.services img {
+    max-width: 60px;
+}
+
+.services h3 {
+    color: var(--color-purple);
+    margin: 0.5rem 0 1rem 0;
+}
+
+.services p {
+    color: var(--color-text-grey);
+}
+
+/* --------------- 4.5 Contact Form ------------------- */
+
+.contact-form {
+    background: linear-gradient(135deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
+    color: #FFFFFF;
+    padding: 5rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form p {
+    line-height: 5rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem 0 0 0;
+    position: relative;
+}
+
+input,
+textarea {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2px;
+    border-style: none;
+    margin: 0 0 20px 0;
+}
+
+form button {
+    margin: 0 auto;
+}
+
+
+/* --------------- 4.6 Footer ------------------- */
+
+footer {
+    background-color: var(--color-text-black);
+    color: #FFFFFF;
+    height: 4rem;
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    max-width: 400px;
+    margin: auto;
+    padding: 1.5rem 0;
+}
+
+/* ------------------------- 5. Media Queries -------------------------- */
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    nav {
+        justify-content: flex-end;
+    }
+
+    .project-item {
+        margin: 1.5rem 2rem;
+
+        flex-direction: row;
+    }
+
+    .project-item div {
+        max-width: 35vw;
+        order: 0;
+    }
+
+    .project-item span {
+        /*max-width: 60vw;*/
+    }
+
+    .project-item:nth-child(even) span{
+        order: -1;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 16px;
+    }
+}
